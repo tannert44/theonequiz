@@ -28,10 +28,15 @@ http-server
 ## JavaScript concepts
 1. Explain what hoisting is. Provide your answer below.
 
-  **Student answer: **
+  **Student answer:**A JavaScript feature that allows you to make forward references to functions and variables.  
 1. What is a callback? Why do we use them in JavaScript? Provide your answer, and code a simple example below.
 
-  **Student answer: **
+  **Student answer: **A callback is a function that is passed to another function as an argument. They are used for a variety of reasons, but are very helpful when attempting to communicate data across modules.
+  ```
+  $("#btn_1").click(function() {
+    alert("Btn 1 Clicked");
+  });
+  ```
 
 ## Functions and operators
 
@@ -60,19 +65,30 @@ http-server
 
 1. Write a function named `getAnimals` that uses the jQuery `ajax` method to retrieve the `data/animals.json` file. When you execute the functions, it should just log *just the array* of animals to the console when the async is complete. Make sure you provide a prompt of "animals" when logging the array.
 1. What are the four HTTP verbs that you can use in an XHR that correspond to the CRUD actions (create, read, update, delete)?
-  **Student answer:**
+  **Student answer:**GET, POST, UPDATE, DELETE
 
 1. Why did we use Promises when dealing with asynchronous XHR calls?
-  **Student answer:**
+  **Student answer:**So that call backs weren't necessary for speaking across modules
 
 1. Provide a simple example of the syntax for handling a Promise.
   **Student answer:**
+  ```
+    var newPromise = promise; 
+    newPromise.then(function(data){ 
+    console.log(data); 
+    })
+    .fail(function(err){ 
+    console.log(err); }) 
+    .done();
+  ```
 
 ## Scope and this
 
 What gets logged to the console when the following code executes? Explain why.
 
-**Student answer: **
+**Student answer: **42 is logged to the console because the key word "this" refers to the original call site in the global scope, and answer is defined as 42 in that scope
+
+
 
 ```
 var answer = "42";

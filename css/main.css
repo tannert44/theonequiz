@@ -1,0 +1,32 @@
+.first-sibling > li {
+  color: red;
+}
+
+li {
+  display: inline;
+}
+section:nth-child(odd){
+  border: solid black;
+}
+
+li:nth-child(even){
+  background-color: lime;
+}
+
+.blue {
+  color: blue;
+}
+
+.right {
+  display: inline-block;
+  float: right;
+}
+
+.left {
+  display: inline-block;
+  float: left;
+}
+
+.cleared {
+  clear: both;
+}
